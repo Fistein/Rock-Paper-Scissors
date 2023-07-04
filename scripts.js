@@ -8,7 +8,7 @@ function getComputerChoice(pick){
 
 function playRound(playerSelection, computerSelection) {
 
-for (let i = 1; i <= 5; i++) {
+
     if(playerSelection == 'paper' && computerSelection == 'rock'){
         return playerSelection + " for player wins the game";
         
@@ -46,27 +46,17 @@ for (let i = 1; i <= 5; i++) {
     else{
         return "your choice is not included!";
     }
+
+
 }
 
- 
-    
- 
-  }
-  
-  //const playerSelection = prompt("Write to choose rock or scissor or paper").toLowerCase();
   const computerSelection = getComputerChoice("scissor");
-  //console.log(playRound(playerSelection, computerSelection));
- 
-  //counting 
- 
+  
   function game(){
-
- 
-   for(let i =1;i<=5;i++){
+ for(let i =1;i<=5;i++){
     const playerSelection = prompt("Write to choose rock or scissor or paper").toLowerCase();
     console.log(playRound(playerSelection, computerSelection));
     
-     
    } 
   }
   game();
