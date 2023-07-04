@@ -61,17 +61,13 @@ for (let i = 1; i <= 5; i++) {
  
   function game(){
 
- let countComputer = 0;
- let countPlayer = 0;
+ 
    for(let i =1;i<=5;i++){
     const playerSelection = prompt("Write to choose rock or scissor or paper").toLowerCase();
     console.log(playRound(playerSelection, computerSelection));
-    if(computerSelection > 0){
-        return true;
-        countComputer++; 
-    }
+    
      
    } 
   }
   game();
-  console.log(countComputer);
+  
