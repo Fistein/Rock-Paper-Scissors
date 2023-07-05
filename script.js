@@ -55,7 +55,7 @@ switch(random){
   let counterC = 0;
   let counterP = 0;
   function game(){
-    for (let i = 0; i <= 5; i++) {
+    for (let i = 1; i <= 5; i++) {
         const playerSelection = prompt("Enter Rock, Scissors or Rock").toLowerCase();
         //console.log(playRound(playerSelection, computerSelection));
         const result = playRound(playerSelection, computerSelection);
@@ -66,13 +66,13 @@ switch(random){
         if(result.includes('You')){
             counterP = counterP + 1;
         }
-
+            console.log(result);
     }
     if(counterP > counterC){
         return 'Finally, player wins.';
     }
     else{
-        return 'Unfortunately, computer wins.';
+        return 'Ohh!, computer wins.';
     }
     // 
   }
