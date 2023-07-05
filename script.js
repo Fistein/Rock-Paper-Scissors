@@ -56,7 +56,7 @@ switch(random){
   let counterP = 0;
   function game(){
     for (let i = 1; i <= 5; i++) {
-        const playerSelection = prompt("Enter Rock, Scissors or Rock").toLowerCase();
+        const playerSelection = prompt("Enter Rock, Scissors or Paper").toLowerCase();
         //console.log(playRound(playerSelection, computerSelection));
         const result = playRound(playerSelection, computerSelection);
         if(result.includes('computer')){
