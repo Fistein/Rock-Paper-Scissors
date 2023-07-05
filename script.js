@@ -48,7 +48,35 @@ switch(random){
     }
   }
    
-  const playerSelection = prompt("Enter Rck, Scissors or Rock").toLowerCase();
+  //const playerSelection = prompt("Enter Rck, Scissors or Rock").toLowerCase();
   const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
+  //console.log(playRound(playerSelection, computerSelection));
+
+  let counterC = 0;
+  let counterP = 0;
+  function game(){
+    for (let i = 0; i <= 5; i++) {
+        const playerSelection = prompt("Enter Rock, Scissors or Rock").toLowerCase();
+        //console.log(playRound(playerSelection, computerSelection));
+        const result = playRound(playerSelection, computerSelection);
+        if(result.includes('computer')){
+            counterC = counterC + 1;
+        }
+
+        if(result.includes('You')){
+            counterP = counterP + 1;
+        }
+
+    }
+    if(counterP > counterC){
+        return 'Finally, player wins.';
+    }
+    else{
+        return 'Unfortunately, computer wins.';
+    }
+    // 
+  }
+  console.log(game());
+
+
  
