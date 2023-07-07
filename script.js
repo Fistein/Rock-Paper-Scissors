@@ -8,8 +8,10 @@ switch(random){
         return 'rock';
     case 2:
         return 'scissors';
-}
-   
+
+       }
+ 
+
 }
    //console.log(getComputerChoice());
    
@@ -25,7 +27,7 @@ switch(random){
         }
     }
 
-    if(playerSelection === 'paper'){
+    else if(playerSelection === 'paper'){
         if(computerSelection === 'rock'){
             return 'You won the game';
         }
@@ -34,7 +36,7 @@ switch(random){
         }
     }
 
-    if(playerSelection === 'scissors'){
+    else if(playerSelection === 'scissors'){
         if(computerSelection === 'paper'){
             return 'You won the game';
         }
@@ -43,8 +45,11 @@ switch(random){
         }
     }
 
-    if(playerSelection === computerSelection){
+    else if(playerSelection === computerSelection){
         return 'Game becomes a tie !';
+    }
+    else{
+        return 'Your entry is not valid !'; 
     }
   }
    
