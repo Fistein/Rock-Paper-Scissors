@@ -2,13 +2,36 @@
 const btn = document.querySelectorAll('.btn-game');
 let player;
 const division = document.querySelector('div');
-btn.forEach((button) => {
-    button.addEventListener('click', () => {
-        player = button.textContent;
-        const playerSelection = player;
-        division.textContent = playRound(playerSelection, computerSelection); 
+let countercom = 0;
+let counterplay = 0;
+
+
+    
+    btn.forEach((button) => {
+        button.addEventListener('click', () => {
+            player = button.textContent;
+            const playerSelection = player;
+            division.textContent = playRound(playerSelection, computerSelection);
+            
+            if(division.textContent.includes('Computer')){
+                countercom = countercom + 1;
+                //division.textContent += "  Computer has" + countercom + "point(s)!";
+            }
+            else{
+                counterplay = counterplay + 1;
+                //division.textContent += " "+"  Player gains" + counterplay + "point!";
+            }
+
+            if(countercom == 5 && countercom > counterplay){
+                division.textContent += "  Finally Computer wins !";
+            }
+            else if(counterplay == 5 && countercom < counterplay){
+                division.textContent += "  Finally Player takes a lead !";
+            }
+        });
     });
-});
+    
+
 
 
 
@@ -55,34 +78,36 @@ function playRound(playerSelection, computerSelection) {
           return 'you win !';
         }
         else{
-            return 'Computer wins !';  
+            return 'Computer wins this round !';  
         }
     }
 
     else if(playerSelection === 'paper'){
         if(computerSelection === 'rock'){
-            return 'you win !';
+            return 'you win this round!';
         }
         else{
-            return 'Computer wins !';
+            return 'Computer wins this round!';
         }
     }
 
     else if(playerSelection === 'scissors'){
         if(computerSelection === 'paper'){
-            return 'you win !';
+            return 'you win this round!';
         }
         else{
-            return 'Computer wins !';
+            return 'Computer wins this round!';
         }
     }
 
     else {
         return 'Game becomes a tie !';
     }
+
+    
     
   }
-    
+  
     const computerSelection = getComputerChoice();
   //console.log(playRound(playerSelection, computerSelection));
   
