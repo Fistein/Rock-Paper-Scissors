@@ -11,7 +11,7 @@ let counterplay = 0;
         button.addEventListener('click', () => {
             player = button.textContent;
             const playerSelection = player;
-            division.textContent = playRound(playerSelection, computerSelection);
+            
             
             if(division.textContent.includes('Computer')){
                 countercom = countercom + 1;
@@ -21,6 +21,7 @@ let counterplay = 0;
                 counterplay = counterplay + 1;
                 //division.textContent += " "+"  Player gains" + counterplay + "point!";
             }
+            
 
             if(countercom == 5 && countercom > counterplay){
                 division.textContent += "  Finally Computer wins !";
@@ -28,19 +29,41 @@ let counterplay = 0;
             else if(counterplay == 5 && countercom < counterplay){
                 division.textContent += "  Finally Player takes a lead !";
             }
+            else{
+                division.textContent = playRound(playerSelection, computerSelection);
+
+            }
         });
     });
-    
+    //==================== STYLING BUTTONS ==============
+    let rock = document.getElementById('rock');
+    rock.style.color = '#ffffff';
+    rock.style.background = 'red';
+
+    /*let paper = document.getElementById('paper');
+    rpaper.style.color = '#ffffff';
+    paper.style.background = 'green';
+
+    let scissors = document.getElementById('#scissors');
+    scissors.style.color = '#ffffff';
+    scissors.style.background = 'blue'; */
 
 
 
 
 
 
-//================== PLACE TO DISPLAY SOLUTION =============
+//================== STYLING DIVISION =============
 
+division.style.background = '#edb104';
+division.style.width = '500px';
+division.style.height = '100px';
+division.style.textAlign = 'center';
+division.style.paddingTop = '80px';
+division.style.color = 'blue';
+division.style.fontSize = '110%';
+division.style.fontWeight = '900';
 
-//division.textContent = 'hello!';
 
 
 
