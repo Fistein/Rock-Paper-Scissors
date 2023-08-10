@@ -40,16 +40,19 @@ let counterplay = 0;
     rock.style.color = '#ffffff';
     rock.style.background = 'red';
     rock.style.border = 'none';
+    rock.style.padding = '5px';
 
     let paper = document.getElementById('paper');
     paper.style.color = '#ffffff';
     paper.style.background = 'green';
     paper.style.border = 'none';
+    paper.style.padding = '5px';
 
     let scissors = document.getElementById('scissors');
     scissors.style.color = '#ffffff';
     scissors.style.background = 'blue';
     scissors.style.border = 'none';
+    scissors.style.padding = '5px';
 
   
 //================== STYLING DIVISION =============
