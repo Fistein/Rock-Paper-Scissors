@@ -11,15 +11,15 @@ let counterplay = 0;
         button.addEventListener('click', () => {
             player = button.textContent;
             const playerSelection = player;
-            
+            division.textContent = playRound(playerSelection, computerSelection);
             
             if(division.textContent.includes('Computer')){
                 countercom = countercom + 1;
-                //division.textContent += "  Computer has" + countercom + "point(s)!";
+                division.textContent += "  Computer has " + countercom + " point(s)!";
             }
             else{
                 counterplay = counterplay + 1;
-                //division.textContent += " "+"  Player gains" + counterplay + "point!";
+                division.textContent += " "+"  Player gains " + counterplay + " point(s)!";
             }
             
 
@@ -30,7 +30,7 @@ let counterplay = 0;
                 division.textContent += "  Finally Player takes a lead !";
             }
             else{
-                division.textContent = playRound(playerSelection, computerSelection);
+                
 
             }
         });
@@ -39,31 +39,29 @@ let counterplay = 0;
     let rock = document.getElementById('rock');
     rock.style.color = '#ffffff';
     rock.style.background = 'red';
+    rock.style.border = 'none';
 
-    /*let paper = document.getElementById('paper');
-    rpaper.style.color = '#ffffff';
+    let paper = document.getElementById('paper');
+    paper.style.color = '#ffffff';
     paper.style.background = 'green';
+    paper.style.border = 'none';
 
-    let scissors = document.getElementById('#scissors');
+    let scissors = document.getElementById('scissors');
     scissors.style.color = '#ffffff';
-    scissors.style.background = 'blue'; */
+    scissors.style.background = 'blue';
+    scissors.style.border = 'none';
 
-
-
-
-
-
+  
 //================== STYLING DIVISION =============
 
 division.style.background = '#edb104';
-division.style.width = '500px';
+division.style.width = '700px';
 division.style.height = '100px';
 division.style.textAlign = 'center';
 division.style.paddingTop = '80px';
 division.style.color = 'blue';
 division.style.fontSize = '110%';
 division.style.fontWeight = '900';
-
 
 
 
@@ -132,14 +130,6 @@ function playRound(playerSelection, computerSelection) {
   }
   
     const computerSelection = getComputerChoice();
-  //console.log(playRound(playerSelection, computerSelection));
   
-  
-//function game(){
-//const result = playRound(playerSelection, computerSelection);
-
-
-   // }
-    //game(); 
 
  
